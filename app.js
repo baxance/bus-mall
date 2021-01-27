@@ -5,7 +5,7 @@ let leftProducts = document.getElementById('left-product');
 let centerProducts = document.getElementById('center-product');
 let rightProducts = document.getElementById('right-product');
 
-let votingTurns = 5;
+let votingTurns = 25;
 
 function mallProduct(name) {
 
@@ -100,6 +100,15 @@ function handleClicks(event) {
 
 renderProducts();
 threeProducts.addEventListener('click', handleClicks);
+
+let ctx = document.getElementById("chart").getContext('2d');
+
+let votesByProduct = [];
+let timesShown = [];
+
+for (let i = 0; i < mallProduct.allImages.length; i++) {
+  votesByProduct.push(mallProduct.allImages[i].productClicked);
+}
 
 // function randomThree() {
 
