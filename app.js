@@ -110,6 +110,16 @@ for (let i = 0; i < mallProduct.allImages.length; i++) {
   votesByProduct.push(mallProduct.allImages[i].productClicked);
 }
 
+// chart id = "chart"
+
+let chart = new chart(ctx, {
+  type: 'bar',
+  data:  {
+    labels: products.length,
+    data [ ``]
+  }
+})
+
 // function randomThree() {
 
 //   let left = Math.floor(Math.random() * products.length);
